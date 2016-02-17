@@ -1,0 +1,11 @@
+.task id="#{dom_id(@task)}"
+  h3
+    = @task.name
+  hr
+  = @task.description
+  hr
+
+.row
+  .col-md-1
+    = link_to 'Back', '#'
+

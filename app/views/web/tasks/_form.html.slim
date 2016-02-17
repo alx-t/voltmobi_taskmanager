@@ -1,0 +1,7 @@
+.row
+  .col-md-4
+    = simple_form_for task do |f|
+      = f.input :name, label: 'Name'
+      = f.input :description, label: 'Description'
+      .btn = f.submit 'Create'
+
