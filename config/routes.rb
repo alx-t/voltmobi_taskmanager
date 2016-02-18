@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   scope module: 'web' do
-    #root to: ''
+    root to: 'tasks#index'
     resources :tasks
   end
 end
