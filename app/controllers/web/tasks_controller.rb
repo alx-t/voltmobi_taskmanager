@@ -1,4 +1,5 @@
 class Web::TasksController < Web::ApplicationController
+  before_action :load_task, only: [:show, :next_state]
 
   def index
     @tasks = Task.all
@@ -18,13 +19,16 @@ class Web::TasksController < Web::ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
   end
 
   private
 
   def task_params
     params.require(:task).permit(:name, :description)
+  end
+
+  def load_task
+    @task = Task.find(params[:id])
   end
 end
 

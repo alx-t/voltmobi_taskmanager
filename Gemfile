@@ -12,14 +12,17 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'skim'
+
+gem 'aasm'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'factory_girl_rails'

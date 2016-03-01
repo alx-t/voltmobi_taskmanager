@@ -1,17 +1,13 @@
 .task id="#{dom_id(@task)}"
-  /.row
   h3
     = @task.name
-  /.row
   hr
   = @task.description
   hr
-  /.row
-    /.col-md-2
   = local_date @task.created_at
   hr
-    /.col-md-1
-  = @task.state
+  = @task.aasm_state
+  hr
 
 .row
   .col-md-1

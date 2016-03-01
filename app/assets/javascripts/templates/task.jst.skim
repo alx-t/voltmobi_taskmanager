@@ -1,0 +1,12 @@
+.col-md-1
+  = @task.id
+.col-md-2
+  = @task.local_date
+.col-md-4
+  a href=@task.view_task_url =@task.name
+.col-md-2
+  = @task.aasm_state
+- unless @task.next_state == ""
+  .col-md-2
+    a href=@task.change_status_url class='btn btn-primary btn-sm' data-method='patch' data-remote='true' =@task.next_state
+

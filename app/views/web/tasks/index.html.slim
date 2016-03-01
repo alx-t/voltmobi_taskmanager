@@ -3,13 +3,18 @@ hr
 
 .task-list
   - @tasks.each do |task|
-    .row.task
+    .row.task id="#{dom_id(task)}"
       .col-md-1
         = task.id
       .col-md-2
         = local_date task.created_at
-      .col-md-6
+      .col-md-4
         = link_to task.name, task
+      .col-md-2
+        = task.aasm_state
+      .col-md-2
+        = btn_to(task)
+    br
 
 .row
   =link_to 'New task', new_task_path

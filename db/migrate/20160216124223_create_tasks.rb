@@ -3,7 +3,6 @@ class CreateTasks < ActiveRecord::Migration
     create_table :tasks do |t|
       t.string :name, null: false
       t.text :description
-      t.string :state
 
       t.timestamps null: false
     end
