@@ -8,6 +8,9 @@
   hr
   = @task.aasm_state
   hr
+  - unless @task.file_identifier.nil?
+    = file_link @task.file
+    hr
 
 .row
   .col-md-1

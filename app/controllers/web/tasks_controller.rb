@@ -24,7 +24,7 @@ class Web::TasksController < Web::ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :file)
   end
 
   def load_task

@@ -1,6 +1,7 @@
 class Task < ActiveRecord::Base
   include AASM
 
+  mount_uploader :file, FileUploader
   validates :name, presence: true
 
   aasm do

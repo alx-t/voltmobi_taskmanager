@@ -19,6 +19,8 @@ gem 'simple_form'
 gem 'skim'
 
 gem 'aasm'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'byebug'
